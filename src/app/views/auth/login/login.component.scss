@@ -1,0 +1,31 @@
+@import './../../../shared/styles/styles-app.scss';
+
+.input-auth {
+  @include setStyleBorder(1px, solid, blue, 0.5rem);
+  background: white;
+  height: 3rem;
+  input {
+    background: transparent;
+    border: none !important;
+  }
+}
+
+.title {
+  @include titleStyle;
+}
+
+.input-error {
+  --border-color: red !important;
+  --highlight-color-invalid: red !important;
+}
+
+.button-content {
+  justify-content: center;
+  display: flex;
+}
+
+label {
+  color: white;
+  font-size: 2rem;
+  font-family: $font-description;
+}

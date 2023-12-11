@@ -1,0 +1,23 @@
+<ion-avatar>
+  <ion-img alt="Imagen de perfil" [src]="urlStr" />
+</ion-avatar>
+<div>
+  <ion-fab>
+    <ion-fab-button>
+      <ion-icon name="add" id="click-trigger"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-popover trigger="click-trigger" triggerAction="click">
+    <ng-template>
+        <ion-button fill="clear" shape="round" (click)="takeSelfie()">
+          <ion-icon fill="clear" slot="start" name="camera-outline"></ion-icon>
+          Tomar foto
+        </ion-button>
+
+        <ion-button fill="clear" shape="round" (click)="selectImage()">
+          <ion-icon fill="clear" slot="start" name="image-outline"></ion-icon>
+          Subir foto
+        </ion-button>
+    </ng-template>
+  </ion-popover>
+</div>

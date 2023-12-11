@@ -1,0 +1,18 @@
+<cp-header></cp-header>
+<ion-content>
+
+  <ion-list>
+  <cp-modal-calories (item)="sendItem($event)"></cp-modal-calories>
+
+    <ion-item *ngFor="let item of caloriesItems; let index">
+      <ion-label>
+        {{ item.food }} - Calorias. {{ item.average_calories }} - Cantidad. {{item.amount}}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
+
+

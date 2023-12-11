@@ -1,0 +1,25 @@
+$color-principal: #09A045;
+$font-titles: Merriweather;
+$font-description: Inter;
+
+$background-app: './../../../../assets/launch.png';
+
+@mixin setStyleBorder($size, $style, $color, $radius: null) {
+  @if $radius != null {
+    border-radius: $radius;
+  }
+
+  border: $size solid $color;
+}
+
+@mixin titleStyle {
+  color: #2B2B2B;
+  text-align: center;
+  font-family: $font-titles;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+}
+
+

@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <div class="alert alert-danger" role="alert" *ngIf="showErrorAlert">
+    Usuario y/o contraseña incorrectos.
+  </div>
+
+  <h1 class="title mt-5">Bienvenido</h1>
+  <div class="mt-5 pt-2 px-4">
+    <form [formGroup]="loginForm" (ngSubmit)="sendLogin()">
+      <ion-label for="numberDoc">Número de documento</ion-label>
+      <div class="input-auth mt-1 px-2" >
+        <ion-input type="numberDoc" formControlName="number_document" placeholder="100312323" name="email" id="email" />
+      </div>
+      <ion-label for="password" class="mt-1">Contraseña</ion-label><br>
+      <div class="input-auth mt-1 px-2">
+        <ion-input type="password" formControlName="password" placeholder="*******" name="password" id="password" />
+      </div>
+      <div class="button-content mt-5" *ngIf="_isLoad | async as _isLoad">
+        <ion-button type="submit" fill="solid" shape="round" [disabled]="loginForm.invalid">
+          Inicia Sesión
+        </ion-button>
+      </div>
+    </form>
+  </div>
+
+  <div class="button-content mt-5">
+    <ion-button fill="clear" shape="round" routerLink="/register" color="success">
+      Registrate
+    </ion-button>
+  </div>
+</ion-content>
+
